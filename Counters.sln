@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountersClient", "CountersClient\CountersClient.csproj", "{0515EA28-237C-49A4-91DF-9D4350A40D6C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{541B661D-15BC-4C98-BA04-5DB603717AFB} = {541B661D-15BC-4C98-BA04-5DB603717AFB}
+		{87874A75-FE30-4F4B-AC51-510300643B88} = {87874A75-FE30-4F4B-AC51-510300643B88}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountersServer", "CountersServer\CountersServer.csproj", "{541B661D-15BC-4C98-BA04-5DB603717AFB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{87874A75-FE30-4F4B-AC51-510300643B88} = {87874A75-FE30-4F4B-AC51-510300643B88}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountersLibrary", "CountersLibrary\CountersLibrary.csproj", "{87874A75-FE30-4F4B-AC51-510300643B88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0515EA28-237C-49A4-91DF-9D4350A40D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0515EA28-237C-49A4-91DF-9D4350A40D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0515EA28-237C-49A4-91DF-9D4350A40D6C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0515EA28-237C-49A4-91DF-9D4350A40D6C}.Debug|x86.Build.0 = Debug|Any CPU
+		{0515EA28-237C-49A4-91DF-9D4350A40D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0515EA28-237C-49A4-91DF-9D4350A40D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0515EA28-237C-49A4-91DF-9D4350A40D6C}.Release|x86.ActiveCfg = Release|x86
+		{0515EA28-237C-49A4-91DF-9D4350A40D6C}.Release|x86.Build.0 = Release|x86
+		{541B661D-15BC-4C98-BA04-5DB603717AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{541B661D-15BC-4C98-BA04-5DB603717AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{541B661D-15BC-4C98-BA04-5DB603717AFB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{541B661D-15BC-4C98-BA04-5DB603717AFB}.Debug|x86.Build.0 = Debug|Any CPU
+		{541B661D-15BC-4C98-BA04-5DB603717AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{541B661D-15BC-4C98-BA04-5DB603717AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{541B661D-15BC-4C98-BA04-5DB603717AFB}.Release|x86.ActiveCfg = Release|x86
+		{541B661D-15BC-4C98-BA04-5DB603717AFB}.Release|x86.Build.0 = Release|x86
+		{87874A75-FE30-4F4B-AC51-510300643B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87874A75-FE30-4F4B-AC51-510300643B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87874A75-FE30-4F4B-AC51-510300643B88}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{87874A75-FE30-4F4B-AC51-510300643B88}.Debug|x86.Build.0 = Debug|Any CPU
+		{87874A75-FE30-4F4B-AC51-510300643B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87874A75-FE30-4F4B-AC51-510300643B88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87874A75-FE30-4F4B-AC51-510300643B88}.Release|x86.ActiveCfg = Release|x86
+		{87874A75-FE30-4F4B-AC51-510300643B88}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

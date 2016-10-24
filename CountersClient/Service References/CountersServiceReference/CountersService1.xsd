@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CountersLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CountersLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CompositeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+  <xs:complexType name="CounterOptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CounterDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CounterID" type="xs:int" />
+      <xs:element minOccurs="0" name="CounterType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CounterOptions" nillable="true" type="tns:CounterOptions" />
+  <xs:complexType name="ArrayOfCounterOptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CounterOptions" nillable="true" type="tns:CounterOptions" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCounterOptions" nillable="true" type="tns:ArrayOfCounterOptions" />
+  <xs:complexType name="PersonalAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountID" type="xs:int" />
+      <xs:element minOccurs="0" name="DateOfCreation" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalAccount" nillable="true" type="tns:PersonalAccount" />
+  <xs:complexType name="ArrayOfPersonalAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonalAccount" nillable="true" type="tns:PersonalAccount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonalAccount" nillable="true" type="tns:ArrayOfPersonalAccount" />
+  <xs:complexType name="ArrayOfCounterValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CounterValue" nillable="true" type="tns:CounterValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCounterValue" nillable="true" type="tns:ArrayOfCounterValue" />
+  <xs:complexType name="CounterValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CounterID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CounterValudId" type="xs:int" />
+      <xs:element minOccurs="0" name="CounterValue1" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DateOfEnterValue" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CounterValue" nillable="true" type="tns:CounterValue" />
+</xs:schema>

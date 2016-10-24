@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="34850705-6d4a-41a7-b724-a54fd4530de5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/CountersService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CountersService.xsd" MetadataType="Schema" ID="bd8c4d3c-039c-4b7a-a653-264c75a82dba" SourceId="1" SourceUrl="http://localhost:8000/CountersService?xsd=xsd1" />
+    <MetadataFile FileName="CountersService1.xsd" MetadataType="Schema" ID="98ff0a4c-e104-4465-8ce9-bc86bc5eb362" SourceId="1" SourceUrl="http://localhost:8000/CountersService?xsd=xsd2" />
+    <MetadataFile FileName="CountersService.disco" MetadataType="Disco" ID="9df20b76-7a46-487e-b9e8-af0b525ccd95" SourceId="1" SourceUrl="http://localhost:8000/CountersService?disco" />
+    <MetadataFile FileName="CountersService.wsdl" MetadataType="Wsdl" ID="e8b07312-7fa7-4219-8d72-d30e5a5e7676" SourceId="1" SourceUrl="http://localhost:8000/CountersService?wsdl" />
+    <MetadataFile FileName="CountersService2.xsd" MetadataType="Schema" ID="a042c8ff-dbd9-4770-be14-f71111cf21f6" SourceId="1" SourceUrl="http://localhost:8000/CountersService?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

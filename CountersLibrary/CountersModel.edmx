@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CountersModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CounterOptions">
+          <Key>
+            <PropertyRef Name="CounterID" />
+          </Key>
+          <Property Name="CounterID" Type="int" Nullable="false" />
+          <Property Name="CounterType" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="CounterDescription" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="CounterValue">
+          <Key>
+            <PropertyRef Name="CounterValudId" />
+          </Key>
+          <Property Name="CounterValudId" Type="int" Nullable="false" />
+          <Property Name="AccountID" Type="int" />
+          <Property Name="CounterID" Type="int" />
+          <Property Name="CounterValue" Type="int" />
+          <Property Name="Unit" Type="varchar" MaxLength="15" />
+          <Property Name="DateOfEnterValue" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PersonalAccount">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Name="AccountID" Type="int" Nullable="false" />
+          <Property Name="DateOfCreation" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="CountersModelStoreContainer">
+          <EntitySet Name="CounterOptions" EntityType="Self.CounterOptions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CounterValue" EntityType="Self.CounterValue" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonalAccount" EntityType="Self.PersonalAccount" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CountersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CountersEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PersonalAccount" EntityType="CountersModel.PersonalAccount" />
+          <EntitySet Name="CounterOptions" EntityType="CountersModel.CounterOptions" />
+          <EntitySet Name="CounterValue" EntityType="CountersModel.CounterValue" />
+        </EntityContainer>
+        <EntityType Name="PersonalAccount">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Name="AccountID" Type="Int32" Nullable="false" />
+          <Property Name="DateOfCreation" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="CounterOptions">
+          <Key>
+            <PropertyRef Name="CounterID" />
+          </Key>
+          <Property Name="CounterID" Type="Int32" Nullable="false" />
+          <Property Name="CounterType" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CounterDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CounterValue">
+          <Key>
+            <PropertyRef Name="CounterValudId" />
+          </Key>
+          <Property Name="CounterValudId" Type="Int32" Nullable="false" />
+          <Property Name="AccountID" Type="Int32" />
+          <Property Name="CounterID" Type="Int32" />
+          <Property Name="CounterValue1" Type="Int32" />
+          <Property Name="Unit" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfEnterValue" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CountersModelStoreContainer" CdmEntityContainer="CountersEntities">
+          <EntitySetMapping Name="PersonalAccount">
+            <EntityTypeMapping TypeName="CountersModel.PersonalAccount">
+              <MappingFragment StoreEntitySet="PersonalAccount">
+                <ScalarProperty Name="DateOfCreation" ColumnName="DateOfCreation" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CounterOptions">
+            <EntityTypeMapping TypeName="CountersModel.CounterOptions">
+              <MappingFragment StoreEntitySet="CounterOptions">
+                <ScalarProperty Name="CounterDescription" ColumnName="CounterDescription" />
+                <ScalarProperty Name="CounterType" ColumnName="CounterType" />
+                <ScalarProperty Name="CounterID" ColumnName="CounterID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CounterValue">
+            <EntityTypeMapping TypeName="CountersModel.CounterValue">
+              <MappingFragment StoreEntitySet="CounterValue">
+                <ScalarProperty Name="DateOfEnterValue" ColumnName="DateOfEnterValue" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="CounterValue1" ColumnName="CounterValue" />
+                <ScalarProperty Name="CounterID" ColumnName="CounterID" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="CounterValudId" ColumnName="CounterValudId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
